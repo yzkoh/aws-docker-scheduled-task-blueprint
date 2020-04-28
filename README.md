@@ -21,7 +21,7 @@ The next step is to build the docker image of the source code.
    ```
    docker-compose build --no-cache
    ```
-1. Check if the docker image is built. The image repository should be named `dockermicroservices_product-services`.
+1. Check if the docker image is built. The image repository should be named `awsdockerscheduledtaskblueprint_product-services`.
    ```
    docker image ls
    ```
@@ -42,7 +42,14 @@ docker run -e AWS_ACCESS_KEY_ID="<aws_access_key>" -e AWS_SECRET_ACCESS_KEY="<aw
 For example, to run `example_handler_1` microservice,
 
 ```
-docker run -e AWS_ACCESS_KEY_ID="123" -e AWS_SECRET_ACCESS_KEY="456" dockermicroservices_product-services example_handler_1
+docker run -e AWS_ACCESS_KEY_ID="123" -e AWS_SECRET_ACCESS_KEY="456" awsdockerscheduledtaskblueprint_product-services example_handler_1
+```
+
+You should expect:
+
+```
+message: Success!
+data: 3
 ```
 
 ## Deploying image to AWS
